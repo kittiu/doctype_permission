@@ -1,0 +1,34 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "DocType Permission Level",
+  "modified": "2024-09-08 21:57:01.986104",
+  "name": "Custom Query",
+  "script": "conditions = \"\"",
+  "title": "Custom Query"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "DocType Permission Level",
+  "modified": "2024-09-08 21:59:47.636896",
+  "name": "Employee's Docs",
+  "script": "employee = frappe.db.get_value(\"Employee\", {\"user_id\": user})\nconditions = \"employee = %s\" % frappe.db.escape(employee)",
+  "title": "Employee's Docs"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "DocType Permission Level",
+  "modified": "2024-09-08 22:00:08.776045",
+  "name": "Owner's Docs",
+  "script": "conditions = \"owner = %s\" % frappe.db.escape(user)",
+  "title": "Owner's Docs"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "DocType Permission Level",
+  "modified": "2024-09-08 22:07:15.653912",
+  "name": "Full Access",
+  "script": "conditions = \"true\"",
+  "title": "Full Access"
+ }
+]

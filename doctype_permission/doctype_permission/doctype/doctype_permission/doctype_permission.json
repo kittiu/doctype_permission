@@ -78,7 +78,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-09-08 17:38:53.487949",
+ "modified": "2024-09-08 21:48:02.850194",
  "modified_by": "Administrator",
  "module": "DocType Permission",
  "name": "DocType Permission",
@@ -86,6 +86,8 @@
  "owner": "Administrator",
  "permissions": [
   {
+   "amend": 1,
+   "cancel": 1,
    "create": 1,
    "delete": 1,
    "email": 1,
@@ -95,6 +97,7 @@
    "report": 1,
    "role": "System Manager",
    "share": 1,
+   "submit": 1,
    "write": 1
   }
  ],

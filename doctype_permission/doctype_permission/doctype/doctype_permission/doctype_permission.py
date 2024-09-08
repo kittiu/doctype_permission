@@ -7,12 +7,9 @@ from frappe.utils.safe_exec import safe_exec
 
 
 class DocTypePermission(Document):
-
 	def validate(self):
 		if self.docstatus in (1, 2):
 			self.testing = 0
-		for child in self.conditions:
-			child.validate()
 
 	def clear_cache(self):
 		frappe.cache.delete_value("doctype_permission_map")

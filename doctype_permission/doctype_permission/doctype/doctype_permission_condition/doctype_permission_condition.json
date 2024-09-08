@@ -21,28 +21,28 @@
   },
   {
    "columns": 6,
-   "depends_on": "eval:doc.perm_level=='Custom Query';",
+   "fetch_from": "perm_level.script",
+   "fetch_if_empty": 1,
    "fieldname": "script",
    "fieldtype": "Code",
    "in_list_view": 1,
    "label": "Permission Query",
-   "options": "Python",
-   "read_only_depends_on": "eval:doc.perm_level!='Custom Query';"
+   "options": "Python"
   },
   {
    "columns": 2,
    "fieldname": "perm_level",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Permission Level",
-   "options": "Custom Query\nEmployee Docs Only\nOwner Docs Only\nFull Access",
+   "options": "DocType Permission Level",
    "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-09-08 17:52:56.272062",
+ "modified": "2024-09-08 22:10:43.188750",
  "modified_by": "Administrator",
  "module": "DocType Permission",
  "name": "DocType Permission Condition",

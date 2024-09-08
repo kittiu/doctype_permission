@@ -5,6 +5,25 @@ app_description = "Allow easier setup of permission query"
 app_email = "kittiu@ecosoft.co.th"
 app_license = "mit"
 
+fixtures = [
+	{
+		"doctype": "DocType Permission Level",
+		"filters": [
+			[
+				"name",
+				"in",
+				(
+					"Full Access",
+					"Owner's Docs",
+					"Employee's Docs",
+					"Custom Query",
+				),
+			]
+		],
+	}
+]
+
+
 # Apps
 # ------------------
 
@@ -118,11 +137,11 @@ app_license = "mit"
 # Permissions evaluated in scripted ways
 
 permission_query_conditions = {
-	"*": "doctype_permission.utils.get_doctype_permission",
+	"*": "doctype_permission.doctype_permission.utils.get_doctype_permission",
 }
 
 has_permission = {
-	"*": "doctype_permission.utils.has_permission",
+	"*": "doctype_permission.doctype_permission.utils.has_permission",
 }
 
 # DocType Class
@@ -241,4 +260,3 @@ has_permission = {
 # default_log_clearing_doctypes = {
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
-

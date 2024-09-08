@@ -5,6 +5,7 @@ from frappe.model.document import Document
 
 
 class DocTypePermissionCondition(Document):
+	pass
 
 	def validate(self):
 		if self.perm_level == "Employee Docs Only":
