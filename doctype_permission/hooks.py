@@ -117,13 +117,13 @@ app_license = "mit"
 # -----------
 # Permissions evaluated in scripted ways
 
-# permission_query_conditions = {
-# 	"Event": "frappe.desk.doctype.event.event.get_permission_query_conditions",
-# }
-#
-# has_permission = {
-# 	"Event": "frappe.desk.doctype.event.event.has_permission",
-# }
+permission_query_conditions = {
+	"*": "doctype_permission.utils.get_doctype_permission",
+}
+
+has_permission = {
+	"*": "doctype_permission.utils.has_permission",
+}
 
 # DocType Class
 # ---------------
