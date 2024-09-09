@@ -41,6 +41,8 @@ def get_doctype_permission_map():
 
 def has_permission(doc):
 	if get_doctype_permission_map().get(doc.doctype):
+		if doc.is_new():
+			return True
 		doc = frappe.get_list(doc.doctype, filters={"name": doc.name}, pluck="name")
 		if not doc:
 			return False
